@@ -32,3 +32,6 @@ demo/popup-e2e.png
 
 # Claude Code
 .claude/settings.local.json
+
+# build artifacts
+*.zip
