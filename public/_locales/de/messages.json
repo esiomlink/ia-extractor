@@ -1,0 +1,7 @@
+{
+  "extName": { "message": "KI-Extractor" },
+  "extShortName": { "message": "KI-Extractor" },
+  "extDescription": {
+    "message": "KI-Lead-Extractor: macht aus beliebigen Webseiten strukturierte Kontakte und exportiert sie nach CSV oder Google Sheets."
+  }
+}

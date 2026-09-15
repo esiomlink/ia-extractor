@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Avenir Next", "Segoe UI", "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #e7eef9;
+  --color-muted: #8ea0bb;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-mint: #2dd4a7;
+  --color-mint-2: #5eead4;
+  --color-sky: #38bdf8;
+  --color-danger: #fb7185;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: #07101c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255 255 255 / 0.12);
+  border-radius: 99px;
+}

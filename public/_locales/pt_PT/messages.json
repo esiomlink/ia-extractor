@@ -1,0 +1,7 @@
+{
+  "extName": { "message": "Extrator IA" },
+  "extShortName": { "message": "Extrator IA" },
+  "extDescription": {
+    "message": "Extrator de leads com IA: transforma qualquer página web em contactos estruturados e exporta para CSV ou Google Sheets."
+  }
+}

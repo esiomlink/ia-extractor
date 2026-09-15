@@ -1,0 +1,16 @@
+{
+  "name": "ia-extractor",
+  "main": "server/worker.ts",
+  "compatibility_date": "2026-09-15",
+  "workers_dev": true,
+  "vars": {
+    "GEMINI_MODEL": "gemini-3.5-flash-lite"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "USERS",
+      "id": "5d313f8124fb44f5a4d52d6380b2d8ce",
+      "preview_id": "1a3a3cbfc77847a49668841422fafa35"
+    }
+  ]
+}

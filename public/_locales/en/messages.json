@@ -1,0 +1,7 @@
+{
+  "extName": { "message": "AI Extractor" },
+  "extShortName": { "message": "AI Extractor" },
+  "extDescription": {
+    "message": "AI lead extractor: turn any web page into structured contacts, then export to CSV or Google Sheets."
+  }
+}

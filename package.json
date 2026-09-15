@@ -1,0 +1,48 @@
+{
+  "name": "ia-extractor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "tsx server/index.ts",
+    "deploy": "wrangler deploy",
+    "cf:dev": "wrangler dev --port 8787",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:live": "LIVE_GEMINI=1 vitest run src/lib/pipeline.live.test.ts",
+    "demo": "python3 -m http.server 4173 --directory demo",
+    "e2e": "node scripts/e2e-chrome.mjs",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "lucide-react": "^1.46.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "turndown": "^7.2.2",
+    "@hono/node-server": "^1.19.0",
+    "hono": "^4.9.8"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.7.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/chrome": "^0.2.9",
+    "@types/mozilla-readability": "^0.2.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/turndown": "^5.0.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^28.1.0",
+    "oxlint": "^1.81.0",
+    "puppeteer-core": "^24.34.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.20.5",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.0",
+    "wrangler": "^4.34.0"
+  }
+}
