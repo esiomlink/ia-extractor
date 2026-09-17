@@ -4,7 +4,7 @@
 
 # Extracteur IA
 
-**Transforme n'importe quelle page web en base de contacts structurée, en un clic — grâce à l'IA.**
+**Transforme n'importe quelle page web en données structurées, en un clic — grâce à l'IA.**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -16,15 +16,15 @@
 
 <br/>
 
-<img src="docs/screenshot.png" alt="Extracteur IA — extraction de contacts depuis un annuaire universitaire" width="640" />
+<img src="docs/screenshot.png" alt="Extracteur IA — extraction de données structurées depuis une page web" width="640" />
 
 ## Le problème
 
-Recruteurs, agents immobiliers et commerciaux passent des heures à copier-coller manuellement des informations de contact depuis des annuaires, des sites d'entreprises ou des annonces. **Extracteur IA** automatise ce travail : un clic sur une page web, et un modèle de langage en extrait les leads structurés (entreprise, contact, email, téléphone, poste), prêts à exporter.
+Copier-coller à la main des informations depuis un annuaire, un site d'entreprise ou une annonce est long et fragile. **Extracteur IA** automatise ça : un clic sur une page web, et un modèle de langage en extrait des champs structurés (nom, email, téléphone, titre), prêts à exporter en CSV ou Google Sheets.
 
 ## Fonctionnalités
 
-- **4 modèles d'extraction** adaptés à des usages différents : leads B2B, annuaires professionnels, immobilier, offres d'emploi.
+- **4 modèles d'extraction** adaptés à des pages différentes : entreprises, annuaires professionnels, immobilier, offres d'emploi.
 - **Nettoyage intelligent du DOM** côté client (Mozilla Readability + fallback texte intégral) avant tout appel réseau, pour ne transmettre que le contenu utile de la page.
 - **Extraction par IA** (Google Gemini) avec sortie JSON strictement typée (`responseSchema`), exécutée **côté serveur** — la clé d'API n'est jamais exposée dans l'extension.
 - **Export CSV et Google Sheets** (OAuth), en un clic.
@@ -44,7 +44,7 @@ flowchart LR
     D <-->|quota / statut Pro| F[(Cloudflare KV)]
     D -->|webhook signé| G[Stripe]
     D --> C
-    C --> H[Popup : leads + export CSV/Sheets]
+    C --> H[Popup : résultats + export CSV/Sheets]
 ```
 
 Le quota et le statut Pro sont **toujours vérifiés côté serveur** : le client ne peut jamais s'auto-attribuer un accès illimité, seul un paiement Stripe confirmé (signature webhook vérifiée par HMAC-SHA256) débloque le compte.
@@ -104,7 +104,6 @@ Variables serveur (`server/.env`, voir `server/.env.example`) : `GEMINI_API_KEY`
 - [x] Facturation Stripe + quota serveur
 - [x] Internationalisation (6 langues)
 - [ ] Publication sur le Chrome Web Store (revue en cours)
-- [ ] Export vers d'autres CRM
 
 ## Licence
 
